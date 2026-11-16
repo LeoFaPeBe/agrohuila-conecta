@@ -1,0 +1,106 @@
+# CI de AgroHuila Conecta: lint + pruebas + build + E2E + API en cada push y pull request.
+# Quality Gate: el pipeline falla si falla cualquier prueba, el lint, o si la cobertura baja
+# de los umbrales definidos (jest coverageThreshold en backend y vitest thresholds en frontend).
+name: CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  backend:
+    name: Backend · lint + unit/caja blanca + build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: backend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: backend/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test:cov
+      - run: npm run build
+
+  frontend:
+    name: Frontend · lint + RTL + build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: frontend
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test:cov
+      - run: npm run build
+        env:
+          NEXT_PUBLIC_API_URL: http://localhost:4000
+
+  e2e-api:
+    name: E2E Playwright + API Newman
+    needs: [backend, frontend]
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: agrohuila
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready --health-interval 5s --health-timeout 5s --health-retries 10
+    env:
+      DATABASE_URL: postgresql://postgres:postgres@localhost:5432/agrohuila
+      DIRECT_URL: postgresql://postgres:postgres@localhost:5432/agrohuila
+      JWT_SECRET: ${{ secrets.CI_JWT_SECRET || 'ci-only-secret-not-used-in-production' }}
+      CORS_ORIGIN: http://localhost:3000
+      NEXT_PUBLIC_API_URL: http://localhost:4000
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Backend (migraciones + seed + arranque)
+        working-directory: backend
+        run: |
+          npm ci
+          npx prisma migrate deploy
+          npx ts-node prisma/seed.ts
+          npm run build
+          nohup node dist/main.js > ../backend.log 2>&1 &
+      - name: Frontend (build + arranque)
+        working-directory: frontend
+        run: |
+          npm ci
+          npm run build
+          nohup npm run start > ../frontend.log 2>&1 &
+          npx wait-on http://localhost:3000/login http://localhost:4000/health
+      - name: Playwright
+        working-directory: frontend
+        run: |
+          npx playwright install --with-deps chromium
+          npx playwright test
+      - name: Newman (colección Postman)
+        run: |
+          npx newman run docs/calidad/09_Postman/AgroHuila_Conecta.postman_collection.json \
+            -e docs/calidad/09_Postman/AgroHuila_Local.postman_environment.json
+      - name: Guardar reportes y logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: reportes-calidad
+          path: |
+            frontend/playwright-report
+            backend.log
