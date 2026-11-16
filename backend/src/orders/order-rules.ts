@@ -52,6 +52,16 @@ export function calculateOrderTotal(lines: Pick<CartLine, 'quantity' | 'unitPric
   return lines.reduce((sum, l) => sum + l.quantity * l.unitPrice, 0);
 }
 
+/** DEF-04: valor máximo de un pedido (límite de la columna INTEGER y regla de negocio razonable). */
+export const MAX_ORDER_TOTAL = 2_000_000_000;
+
+export function validateOrderTotal(total: number): RuleResult {
+  if (total > MAX_ORDER_TOTAL) {
+    return { ok: false, code: 'TOTAL_TOO_HIGH', message: 'El valor del pedido supera el máximo permitido ($ 2.000.000.000). Divida el pedido.' };
+  }
+  return { ok: true };
+}
+
 export interface ConfirmationInput {
   status: 'PENDING' | 'CONFIRMED';
   producerId: string;

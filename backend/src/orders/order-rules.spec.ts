@@ -2,7 +2,7 @@
  * Pruebas UNITARIAS de las reglas del flujo principal (pedidos).
  * Patrón Arrange -> Act -> Assert. No usan base de datos ni navegador.
  */
-import { calculateOrderTotal, groupCartByProducer, validateItemQuantity } from './order-rules';
+import { calculateOrderTotal, groupCartByProducer, MAX_ORDER_TOTAL, validateItemQuantity, validateOrderTotal } from './order-rules';
 
 describe('validateItemQuantity — SWR-ORD-002', () => {
   test('UNIT-01 acepta una cantidad dentro de lo disponible (caso normal)', () => {
@@ -71,5 +71,17 @@ describe('calculateOrderTotal — SWR-ORD-003 / SWR-DATA-002', () => {
 
   test('UNIT-08 un pedido sin líneas tiene total cero', () => {
     expect(calculateOrderTotal([])).toBe(0);
+  });
+});
+
+describe('validateOrderTotal — regresión DEF-04', () => {
+  test('UNIT-15 frontera: el total máximo se acepta y un peso más se rechaza', () => {
+    expect(validateOrderTotal(MAX_ORDER_TOTAL).ok).toBe(true);
+    expect(validateOrderTotal(MAX_ORDER_TOTAL + 1)).toEqual(expect.objectContaining({ ok: false, code: 'TOTAL_TOO_HIGH' }));
+  });
+
+  test('UNIT-16 30 bultos de $100.000.000 superan el máximo (caso que causaba error 500)', () => {
+    const total = calculateOrderTotal([{ quantity: 30, unitPrice: 100_000_000 }]);
+    expect(validateOrderTotal(total).ok).toBe(false);
   });
 });
