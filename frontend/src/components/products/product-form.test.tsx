@@ -38,6 +38,17 @@ describe('ProductForm', () => {
     expect(onSubmit).not.toHaveBeenCalled();
   });
 
+  test('RTL-21 regresión DEF-03: cantidad mayor a 1.000.000 se rechaza en el formulario', async () => {
+    const onSubmit = vi.fn();
+    render(<ProductForm categories={categories} onSubmit={onSubmit} />);
+    await fillValid();
+    await userEvent.clear(screen.getByLabelText(/cantidad disponible/i));
+    await userEvent.type(screen.getByLabelText(/cantidad disponible/i), '3000000000');
+    await userEvent.click(screen.getByRole('button', { name: /publicar producto/i }));
+    expect(screen.getByText(/la cantidad no puede superar 1\.000\.000/i)).toBeVisible();
+    expect(onSubmit).not.toHaveBeenCalled();
+  });
+
   test('RTL-07 datos válidos envían el producto con números y muestran mensaje de éxito', async () => {
     const onSubmit = vi.fn().mockResolvedValue(undefined);
     render(<ProductForm categories={categories} onSubmit={onSubmit} />);

@@ -4,7 +4,7 @@
  * Ramas de la cantidad: no entera | < 0 | válida.
  * Modo parcial (edición): los campos ausentes no se validan.
  */
-import { MAX_PRICE, ProductInput, validateProductInput } from './product-rules';
+import { MAX_NAME_LENGTH, MAX_PRICE, MAX_QUANTITY, ProductInput, validateProductInput } from './product-rules';
 
 const valid = (): ProductInput => ({
   name: 'Café especial',
@@ -38,6 +38,17 @@ describe('CB-02 validateProductInput', () => {
   test('frontera de la cantidad: 0 es válido y -1 no', () => {
     expect(validateProductInput({ ...valid(), quantity: 0 })).toEqual([]);
     expect(validateProductInput({ ...valid(), quantity: -1 })).toContain('La cantidad disponible no puede ser negativa');
+  });
+
+  test('regresión DEF-03: cantidad por encima del máximo se rechaza (frontera MAX_QUANTITY)', () => {
+    expect(validateProductInput({ ...valid(), quantity: MAX_QUANTITY })).toEqual([]);
+    expect(validateProductInput({ ...valid(), quantity: 3_000_000_000 })).toContain('La cantidad disponible supera el máximo permitido (1.000.000)');
+  });
+
+  test('regresión DEF-05: nombre y descripción con longitud máxima', () => {
+    expect(validateProductInput({ ...valid(), name: 'A'.repeat(MAX_NAME_LENGTH) })).toEqual([]);
+    expect(validateProductInput({ ...valid(), name: 'A'.repeat(5000) })).toContain('El nombre del producto no puede superar 120 caracteres');
+    expect(validateProductInput({ ...valid(), description: 'x'.repeat(1001) })).toContain('La descripción no puede superar 1000 caracteres');
   });
 
   test('cantidad decimal se rechaza', () => {

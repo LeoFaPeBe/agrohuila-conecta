@@ -7,7 +7,14 @@ import {
 } from '@nestjs/common';
 import { AppLogger } from '../common/app-logger';
 import { PrismaService } from '../prisma/prisma.service';
-import { calculateOrderTotal, CartLine, evaluateConfirmation, groupCartByProducer, validateItemQuantity } from './order-rules';
+import {
+  calculateOrderTotal,
+  CartLine,
+  evaluateConfirmation,
+  groupCartByProducer,
+  validateItemQuantity,
+  validateOrderTotal,
+} from './order-rules';
 
 export interface CreateOrderBody {
   items?: { productId: string; quantity: number }[];
@@ -50,6 +57,10 @@ export class OrdersService {
     }
 
     const groups = groupCartByProducer(lines);
+    for (const group of groups.values()) {
+      const check = validateOrderTotal(calculateOrderTotal(group));
+      if (!check.ok) throw new BadRequestException(check.message);
+    }
     const orders = await this.prisma.$transaction(
       [...groups.entries()].map(([producerId, group]) =>
         this.prisma.order.create({

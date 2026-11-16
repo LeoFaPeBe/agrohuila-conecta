@@ -5,14 +5,19 @@ import { useState } from 'react';
 import { CartView } from '@/components/orders/cart-view';
 import { Alert, Card, PageHeader } from '@/components/ui/feedback';
 import { api } from '@/lib/api';
+import { useAuth } from '@/lib/auth-context';
 import { useCart } from '@/lib/cart-context';
 import { Order } from '@/lib/types';
 
 export default function CartPage() {
+  const { user } = useAuth();
   const { lines, remove, clear } = useCart();
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
   const [created, setCreated] = useState<Order[] | null>(null);
+
+  // DEF-07: el carrito es exclusivo del rol Comprador (SWR-AUTH-007), también si se entra por URL.
+  if (user?.role !== 'BUYER') return <Alert variant="error">Esta sección es solo para compradores.</Alert>;
 
   async function submit() {
     setSubmitting(true);

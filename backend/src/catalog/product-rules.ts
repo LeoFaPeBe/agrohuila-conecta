@@ -14,6 +14,11 @@ export interface ProductInput {
 }
 
 export const MAX_PRICE = 100_000_000; // COP
+/** DEF-03: límite superior de cantidad (evita desbordar la columna INTEGER de PostgreSQL). */
+export const MAX_QUANTITY = 1_000_000;
+/** DEF-05: longitudes máximas de texto. */
+export const MAX_NAME_LENGTH = 120;
+export const MAX_DESCRIPTION_LENGTH = 1000;
 
 export function validateProductInput(input: ProductInput, partial = false): string[] {
   const errors: string[] = [];
@@ -21,9 +26,13 @@ export function validateProductInput(input: ProductInput, partial = false): stri
 
   if (required(input.name) && (!input.name || input.name.trim().length < 3)) {
     errors.push('El nombre del producto es obligatorio (mínimo 3 caracteres)');
+  } else if (input.name && input.name.trim().length > MAX_NAME_LENGTH) {
+    errors.push(`El nombre del producto no puede superar ${MAX_NAME_LENGTH} caracteres`);
   }
   if (required(input.description) && (!input.description || input.description.trim().length === 0)) {
     errors.push('La descripción es obligatoria');
+  } else if (input.description && input.description.length > MAX_DESCRIPTION_LENGTH) {
+    errors.push(`La descripción no puede superar ${MAX_DESCRIPTION_LENGTH} caracteres`);
   }
   if (required(input.unit) && (!input.unit || input.unit.trim().length === 0)) {
     errors.push('La unidad de medida es obligatoria');
@@ -45,6 +54,8 @@ export function validateProductInput(input: ProductInput, partial = false): stri
       errors.push('La cantidad disponible debe ser un número entero');
     } else if ((input.quantity as number) < 0) {
       errors.push('La cantidad disponible no puede ser negativa');
+    } else if ((input.quantity as number) > MAX_QUANTITY) {
+      errors.push('La cantidad disponible supera el máximo permitido (1.000.000)');
     }
   }
   // Se acepta una URL absoluta (http/https) o una ruta de imagen del propio sitio (/productos/cafe.svg)

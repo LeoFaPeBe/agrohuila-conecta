@@ -31,12 +31,16 @@ export class AllExceptionsFilter implements ExceptionFilter {
       return res.status(status).json({ statusCode: status, message });
     }
 
-    const err = exception as Error;
+    const err = exception as Error & { code?: string };
+    // DEF-06: se registra el código del error y la última línea del mensaje (la causa),
+    // no el fragmento de código fuente que incluye Prisma.
+    const lines = String(err?.message ?? '').split('\n').map((l) => l.trim()).filter(Boolean);
     this.logger.error('UNHANDLED_ERROR', 'Error no controlado', {
       method: req.method,
       path: req.path,
       error: err?.name,
-      detail: err?.message?.slice(0, 300),
+      code: err?.code,
+      cause: lines[lines.length - 1]?.slice(0, 200),
     });
     return res
       .status(HttpStatus.INTERNAL_SERVER_ERROR)
