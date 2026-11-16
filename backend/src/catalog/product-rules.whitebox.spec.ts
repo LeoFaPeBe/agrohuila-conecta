@@ -54,9 +54,10 @@ describe('CB-02 validateProductInput', () => {
     expect(validateProductInput({ price: 0 }, true)).toEqual(['El precio debe ser mayor que cero']);
   });
 
-  test('URL de imagen sin http(s) se rechaza', () => {
+  test('URL de imagen: http(s) o ruta propia válidas; texto suelto se rechaza', () => {
+    expect(validateProductInput({ ...valid(), imageUrl: '/productos/cafe.svg' })).toEqual([]);
     expect(validateProductInput({ ...valid(), imageUrl: 'foto.jpg' })).toContain(
-      'Debe indicar la URL de una imagen del producto (http o https)',
+      'Debe indicar la URL de una imagen del producto (http, https o /ruta)',
     );
   });
 });

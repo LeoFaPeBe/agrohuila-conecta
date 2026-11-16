@@ -47,8 +47,9 @@ export function validateProductInput(input: ProductInput, partial = false): stri
       errors.push('La cantidad disponible no puede ser negativa');
     }
   }
-  if (required(input.imageUrl) && !/^https?:\/\/\S+$/i.test(input.imageUrl ?? '')) {
-    errors.push('Debe indicar la URL de una imagen del producto (http o https)');
+  // Se acepta una URL absoluta (http/https) o una ruta de imagen del propio sitio (/productos/cafe.svg)
+  if (required(input.imageUrl) && !/^(https?:\/\/\S+|\/\S+\.(svg|png|jpe?g|webp))$/i.test(input.imageUrl ?? '')) {
+    errors.push('Debe indicar la URL de una imagen del producto (http, https o /ruta)');
   }
   return errors;
 }

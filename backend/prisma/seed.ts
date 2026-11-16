@@ -31,7 +31,8 @@ async function main() {
 
   const count = await prisma.product.count();
   if (count === 0) {
-    const img = (seed: string) => `https://picsum.photos/seed/${seed}/400/300`;
+    // Imágenes servidas por el frontend (carpeta frontend/public/productos)
+    const img = (seed: string) => `/productos/${seed}.svg`;
     await prisma.product.createMany({
       data: [
         { name: 'Café especial pergamino seco', description: 'Café de altura, variedad Castillo, proceso lavado.', unit: 'kg', price: 18000, quantity: 120, imageUrl: img('cafe'), categoryId: cat['Café'], producerId: ids['productor1@agrohuila.co'] },
