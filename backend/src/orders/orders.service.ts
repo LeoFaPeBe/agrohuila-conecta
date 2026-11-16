@@ -61,20 +61,26 @@ export class OrdersService {
       const check = validateOrderTotal(calculateOrderTotal(group));
       if (!check.ok) throw new BadRequestException(check.message);
     }
-    const orders = await this.prisma.$transaction(
-      [...groups.entries()].map(([producerId, group]) =>
-        this.prisma.order.create({
-          data: {
-            buyerId,
-            producerId,
-            status: 'PENDING',
-            total: calculateOrderTotal(group),
-            items: { create: group.map((l) => ({ productId: l.productId, quantity: l.quantity, unitPrice: l.unitPrice })) },
-          },
-          include: orderInclude,
-        }),
-      ),
-    );
+    // DEF-08: transacción interactiva con consultas secuenciales (el driver pg no admite
+    // consultas simultáneas sobre la misma conexión dentro de una transacción).
+    const orders = await this.prisma.$transaction(async (tx) => {
+      const created = [];
+      for (const [producerId, group] of groups.entries()) {
+        created.push(
+          await tx.order.create({
+            data: {
+              buyerId,
+              producerId,
+              status: 'PENDING',
+              total: calculateOrderTotal(group),
+              items: { create: group.map((l) => ({ productId: l.productId, quantity: l.quantity, unitPrice: l.unitPrice })) },
+            },
+            include: orderInclude,
+          }),
+        );
+      }
+      return created;
+    });
     for (const order of orders) {
       this.logger.info('ORDER_CREATED', 'Pedido creado en estado Pendiente', {
         orderId: order.id,

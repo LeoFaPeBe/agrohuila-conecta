@@ -49,7 +49,8 @@ export class CatalogService {
     }
     const page = normalizePage(query.page);
     const started = Date.now();
-    const [items, total] = await this.prisma.$transaction([
+    // DEF-08: consultas en conexiones independientes del pool (sin transacción de solo lectura).
+    const [items, total] = await Promise.all([
       this.prisma.product.findMany({
         where,
         select: productSelect,
