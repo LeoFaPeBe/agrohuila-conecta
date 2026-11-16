@@ -1,0 +1,88 @@
+// Modelo de datos de AgroHuila Conecta (MVP)
+// Trazabilidad: SYS-01, SYS-03, SYS-04, SYS-06 / SWR-DATA-001, SWR-DATA-002
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
+  importFileExtension = ""
+  runtime = "nodejs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum Role {
+  PRODUCER
+  BUYER
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+}
+
+model User {
+  id           String    @id @default(uuid())
+  email        String    @unique
+  passwordHash String
+  fullName     String
+  role         Role
+  municipality String
+  phone        String?
+  createdAt    DateTime  @default(now())
+  products     Product[]
+  ordersAsBuyer    Order[] @relation("BuyerOrders")
+  ordersAsProducer Order[] @relation("ProducerOrders")
+}
+
+model Category {
+  id       Int       @id @default(autoincrement())
+  name     String    @unique
+  products Product[]
+}
+
+model Product {
+  id          String      @id @default(uuid())
+  name        String
+  description String
+  unit        String
+  price       Int
+  quantity    Int
+  imageUrl    String
+  active      Boolean     @default(true)
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+  producerId  String
+  producer    User        @relation(fields: [producerId], references: [id])
+  categoryId  Int
+  category    Category    @relation(fields: [categoryId], references: [id])
+  orderItems  OrderItem[]
+
+  @@index([categoryId])
+  @@index([producerId])
+}
+
+model Order {
+  id          String      @id @default(uuid())
+  number      Int         @default(autoincrement()) @unique
+  status      OrderStatus @default(PENDING)
+  total       Int
+  createdAt   DateTime    @default(now())
+  confirmedAt DateTime?
+  buyerId     String
+  buyer       User        @relation("BuyerOrders", fields: [buyerId], references: [id])
+  producerId  String
+  producer    User        @relation("ProducerOrders", fields: [producerId], references: [id])
+  items       OrderItem[]
+}
+
+model OrderItem {
+  id        String  @id @default(uuid())
+  orderId   String
+  order     Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  unitPrice Int
+}
