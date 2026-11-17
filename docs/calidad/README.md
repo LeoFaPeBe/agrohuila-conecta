@@ -12,7 +12,7 @@
 | 08 | `08_RTL/` | 21 pruebas Vitest + RTL, explicación línea por línea de 3 |
 | 09 | `09_Postman/` | Colección, environment sin secretos, reporte Newman (49 aserciones) |
 | 10 | `10_Playwright/` | Reporte HTML (10/10), explicación de 2 pruebas, trace de la falla de E2E-08 |
-| 11 | `11_Errores_Defectos_Fallas_Incidentes.xlsx` | 2 ERR, 8 DEF, 4 INC, 5 MEJ con re-test |
+| 11 | `11_Errores_Defectos_Fallas_Incidentes.xlsx` | 2 ERR, 9 DEF, 4 INC, 5 MEJ con re-test |
 | 12 | `12_ISO25010.xlsx` | Evaluación de las 9 características |
 | 13 | `13_Shift_Right_Logs/` | Logs JSON de 5 escenarios + conclusiones |
 | 14 | `14_Consulta_Lint_Sonar.pdf` | Consulta aplicada al proyecto |
