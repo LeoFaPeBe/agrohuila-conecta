@@ -1,0 +1,202 @@
+{"timestamp":"2026-11-16T18:53:33.064-05:00","level":"INFO","context":"AuthService","event":"LOGIN_SUCCESS","message":"Inicio de sesión correcto","metadata":{"userId":"3b68e0f1-9ab5-4562-8988-443a92905a78","role":"BUYER"}}
+{"timestamp":"2026-11-16T18:53:33.064-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"POST /auth/login","metadata":{"status":200,"durationMs":94}}
+{"timestamp":"2026-11-16T18:53:33.086-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":8}}
+{"timestamp":"2026-11-16T18:53:33.086-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":9}}
+{"timestamp":"2026-11-16T18:53:33.100-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.100-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.109-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.110-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.122-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":7}}
+{"timestamp":"2026-11-16T18:53:33.123-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":9}}
+{"timestamp":"2026-11-16T18:53:33.133-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.133-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.145-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.146-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.154-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.155-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.164-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.165-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.172-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.173-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.180-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.181-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.189-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.190-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.202-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":7}}
+{"timestamp":"2026-11-16T18:53:33.203-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":9}}
+{"timestamp":"2026-11-16T18:53:33.212-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.213-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.223-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.224-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.235-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.235-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.243-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.243-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.251-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.251-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.259-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.260-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.267-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.268-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.275-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.276-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.285-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.285-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.292-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.292-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.302-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.302-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.310-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.310-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.317-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.318-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.326-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.326-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.333-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.334-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.342-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.342-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.349-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.350-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.359-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.359-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.369-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.370-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.377-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.378-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.385-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.385-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.393-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.393-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.401-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.401-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.408-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.409-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.417-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.417-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.427-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.428-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":7}}
+{"timestamp":"2026-11-16T18:53:33.436-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.436-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.445-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.446-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.453-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.453-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.461-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.462-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.469-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.469-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.476-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.477-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.487-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.487-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.494-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.495-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.503-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.504-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.513-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.513-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.526-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.526-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.541-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.541-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.553-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.554-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.565-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.566-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.578-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.578-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.590-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.591-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.604-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.604-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":7}}
+{"timestamp":"2026-11-16T18:53:33.616-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.617-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.628-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.629-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.641-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.642-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.652-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.653-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.665-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.665-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.676-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.677-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.689-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.690-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.703-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.704-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":7}}
+{"timestamp":"2026-11-16T18:53:33.718-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":7}}
+{"timestamp":"2026-11-16T18:53:33.719-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":8}}
+{"timestamp":"2026-11-16T18:53:33.731-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.732-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.742-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.742-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.752-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.752-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.760-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.760-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.771-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.772-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":7}}
+{"timestamp":"2026-11-16T18:53:33.780-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.781-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.789-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.789-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.800-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.801-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.811-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.811-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.824-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":7}}
+{"timestamp":"2026-11-16T18:53:33.824-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":7}}
+{"timestamp":"2026-11-16T18:53:33.834-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.835-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.842-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:33.843-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.852-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.852-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.864-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.864-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.874-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.874-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.887-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.887-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.898-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.898-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.908-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.909-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.920-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.920-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.932-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.932-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.944-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:33.944-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:33.958-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":9}}
+{"timestamp":"2026-11-16T18:53:33.959-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":10}}
+{"timestamp":"2026-11-16T18:53:33.979-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.979-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:33.988-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.988-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.997-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:33.997-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}
+{"timestamp":"2026-11-16T18:53:34.005-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:34.005-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:34.015-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:34.015-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":5}}
+{"timestamp":"2026-11-16T18:53:34.025-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:34.025-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:34.037-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":6}}
+{"timestamp":"2026-11-16T18:53:34.037-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":7}}
+{"timestamp":"2026-11-16T18:53:34.045-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:34.045-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:34.053-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:34.053-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:34.060-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:34.060-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:34.068-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["categoryId","municipality"],"results":1,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:34.068-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:34.076-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["minPrice","maxPrice"],"results":14,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:34.076-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:34.083-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":[],"results":18,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:34.084-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":3}}
+{"timestamp":"2026-11-16T18:53:34.091-05:00","level":"INFO","context":"CatalogService","event":"CATALOG_SEARCH","message":"Búsqueda en el catálogo","metadata":{"filters":["q"],"results":2,"durationMs":2}}
+{"timestamp":"2026-11-16T18:53:34.092-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /products","metadata":{"status":200,"durationMs":4}}

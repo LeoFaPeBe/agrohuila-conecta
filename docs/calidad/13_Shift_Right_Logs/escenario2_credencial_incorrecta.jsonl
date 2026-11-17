@@ -1,0 +1,2 @@
+{"timestamp":"2026-11-16T18:53:27.720-05:00","level":"WARN","context":"AuthService","event":"LOGIN_FAILED","message":"Intento de inicio de sesión fallido","metadata":{"email":"co***@agrohuila.co","reason":"WRONG_PASSWORD"}}
+{"timestamp":"2026-11-16T18:53:27.720-05:00","level":"WARN","context":"HttpRequest","event":"HTTP_REQUEST","message":"POST /auth/login","metadata":{"status":401,"durationMs":113}}

@@ -10,3 +10,4 @@ playwright-report/.last-run.json
 src/generated/
 frontend/next-env.d.ts
 *.tsbuildinfo
+frontend/playwright-report/

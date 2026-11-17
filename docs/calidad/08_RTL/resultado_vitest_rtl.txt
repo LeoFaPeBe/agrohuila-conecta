@@ -1,0 +1,69 @@
+
+ RUN  v3.2.7 /home/claude/agrohuila-conecta/frontend
+      Coverage enabled with v8
+
+ ✓ src/components/products/product-form.test.tsx > ProductForm > RTL-05 muestra error si el nombre está vacío 128ms
+ ✓ src/components/products/product-form.test.tsx > ProductForm > RTL-06 frontera: precio 0 se rechaza (SWR-PROD-003) 415ms
+ ✓ src/components/products/product-form.test.tsx > ProductForm > RTL-21 regresión DEF-03: cantidad mayor a 1.000.000 se rechaza en el formulario 387ms
+ ✓ src/components/products/product-form.test.tsx > ProductForm > RTL-07 datos válidos envían el producto con números y muestran mensaje de éxito 305ms
+ ✓ src/components/products/product-form.test.tsx > ProductForm > RTL-08 si el servidor rechaza, muestra el mensaje del servidor 305ms
+ ✓ src/components/auth/login-form.test.tsx > LoginForm > RTL-01 muestra los mensajes de campos obligatorios si se envía vacío 121ms
+ ✓ src/components/auth/login-form.test.tsx > LoginForm > RTL-02 credenciales incorrectas muestran un mensaje genérico (SWR-AUTH-002) 160ms
+ ✓ src/components/auth/login-form.test.tsx > LoginForm > RTL-03 inicio de sesión correcto guarda la sesión y llama a onSuccess (SWR-AUTH-001) 136ms
+ ✓ src/components/auth/login-form.test.tsx > LoginForm > RTL-04 correo con formato inválido no llama al servidor 123ms
+ ✓ src/components/catalog/catalog-filters.test.tsx > CatalogFilters > RTL-11 combina palabra, categoría, municipio y rango de precio 222ms
+ ✓ src/components/catalog/catalog-filters.test.tsx > CatalogFilters > RTL-12 precio mínimo mayor que el máximo muestra error y no busca 65ms
+ ✓ src/components/catalog/product-card.test.tsx > ProductCard > RTL-13 cantidad mayor a la disponible muestra error y no agrega al carrito 156ms
+ ✓ src/components/catalog/product-card.test.tsx > ProductCard > RTL-14 frontera: exactamente la cantidad disponible se agrega correctamente 36ms
+ ✓ src/components/catalog/product-card.test.tsx > ProductCard > RTL-15 el productor no ve el botón de compra 3ms
+ ✓ src/components/orders/orders.test.tsx > OrdersTable > RTL-16 el productor solo puede confirmar pedidos pendientes 142ms
+ ✓ src/components/orders/orders.test.tsx > OrdersTable > RTL-17 sin pedidos muestra el estado vacío del comprador 3ms
+ ✓ src/components/orders/orders.test.tsx > CartView > RTL-18 avisa que se creará un pedido por cada productor (SWR-ORD-004) 20ms
+ ✓ src/components/layout/protected-shell.test.tsx > ProtectedShell > RTL-19 sin sesión no muestra el contenido y redirige a /login 59ms
+ ✓ src/components/layout/protected-shell.test.tsx > ProtectedShell > RTL-20 con sesión muestra el menú según el rol (Productor) 69ms
+ ✓ src/components/products/products-table.test.tsx > ProductsTable > RTL-09 lista vacía muestra el estado vacío 51ms
+ ✓ src/components/products/products-table.test.tsx > ProductsTable > RTL-10 con datos muestra una fila por producto, precio en COP y alerta de stock bajo 84ms
+
+ Test Files  7 passed (7)
+      Tests  21 passed (21)
+   Start at  19:00:02
+   Duration  9.86s (transform 241ms, setup 902ms, collect 518ms, tests 3.00s, environment 3.27s, prepare 532ms)
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   84.07 |    80.19 |   81.42 |   84.07 |                   
+ components/auth   |   33.08 |      100 |     100 |   33.08 |                   
+  auth-layout.tsx  |       0 |      100 |     100 |       0 | 2-24              
+  login-form.tsx   |     100 |      100 |     100 |     100 |                   
+  ...ster-form.tsx |       0 |      100 |     100 |       0 | 3-81              
+ ...onents/catalog |   96.29 |       95 |   85.71 |   96.29 |                   
+  ...g-filters.tsx |    93.1 |      100 |      75 |    93.1 | 69-72             
+  product-card.tsx |     100 |    91.66 |     100 |     100 | 35                
+ ...ents/dashboard |       0 |      100 |     100 |       0 |                   
+  stat-card.tsx    |       0 |      100 |     100 |       0 | 4-13              
+ components/layout |   92.64 |    79.31 |   64.28 |   92.64 |                   
+  header.tsx       |   78.72 |       25 |      50 |   78.72 | 25-32,45-47       
+  icons.tsx        |     100 |      100 |   85.71 |     100 |                   
+  ...ted-shell.tsx |     100 |     87.5 |      25 |     100 | 29                
+  sidebar.tsx      |     100 |    81.81 |     100 |     100 | 34-39             
+ components/orders |     100 |       80 |      75 |     100 |                   
+  cart-view.tsx    |     100 |    83.33 |      50 |     100 | 20                
+  orders-table.tsx |     100 |    78.57 |     100 |     100 | 25,34,43          
+ ...nents/products |   98.55 |    65.62 |     100 |   98.55 |                   
+  product-form.tsx |   97.72 |       60 |     100 |   97.72 | 105-107           
+  ...cts-table.tsx |     100 |    85.71 |     100 |     100 | 43                
+ components/ui     |   86.66 |    96.42 |   84.61 |   86.66 |                   
+  button.tsx       |     100 |      100 |     100 |     100 |                   
+  feedback.tsx     |   65.45 |      100 |   66.66 |   65.45 | 47-61,64-70       
+  field.tsx        |   97.95 |    93.33 |     100 |   97.95 | 20                
+  logo.tsx         |     100 |      100 |     100 |     100 |                   
+ lib               |   88.09 |    72.58 |      80 |   88.09 |                   
+  api.ts           |   84.61 |       40 |     100 |   84.61 | 19-20,36-37,41-42 
+  auth-context.tsx |   80.76 |    83.33 |      75 |   80.76 | 36,56-60,64-67    
+  cart-context.tsx |   91.48 |    56.25 |    62.5 |   91.48 | 41,50,60,67       
+  format.ts        |     100 |      100 |     100 |     100 |                   
+  types.ts         |       0 |        0 |       0 |       0 |                   
+  validation.ts    |     100 |    90.47 |     100 |     100 | 18,20             
+-------------------|---------|----------|---------|---------|-------------------
