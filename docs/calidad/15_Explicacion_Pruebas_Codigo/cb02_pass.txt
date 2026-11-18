@@ -1,0 +1,27 @@
+PASS src/catalog/product-rules.whitebox.spec.ts
+  CB-02 validateProductInput
+    ✓ publicación completa y válida no tiene errores (2 ms)
+    ✓ rama de precio inválido: 0 (1 ms)
+    ✓ rama de precio inválido: -1
+    ✓ rama de precio inválido: 1500.5 (1 ms)
+    ✓ rama de precio inválido: 100000001
+    ✓ frontera del precio: 1 y MAX_PRICE son válidos
+    ✓ frontera de la cantidad: 0 es válido y -1 no (1 ms)
+    ✓ regresión DEF-03: cantidad por encima del máximo se rechaza (frontera MAX_QUANTITY)
+    ✓ regresión DEF-05: nombre y descripción con longitud máxima
+    ✓ cantidad decimal se rechaza (1 ms)
+    ✓ campos obligatorios vacíos producen un error por cada campo
+    ✓ modo parcial: solo valida los campos enviados
+    ✓ URL de imagen: http(s) o ruta propia válidas; texto suelto se rechaza (1 ms)
+
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------|---------|----------|---------|---------|-------------------
+All files         |     100 |      100 |     100 |     100 |                   
+ product-rules.ts |     100 |      100 |     100 |     100 |                   
+------------------|---------|----------|---------|---------|-------------------
+Test Suites: 1 passed, 1 total
+Tests:       13 passed, 13 total
+Snapshots:   0 total
+Time:        4.035 s, estimated 6 s
+Ran all test suites matching /src\/catalog\/product-rules.whitebox.spec.ts/i.

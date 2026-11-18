@@ -1,0 +1,7 @@
+
+Running 2 tests using 1 worker
+
+  ✓  1 [chromium] › e2e/e2e-05-flujo-confirmar.spec.ts:8:5 › E2E-05 productor confirma un pedido y la cantidad disponible baja (1.7s)
+  ✓  2 [chromium] › e2e/e2e-08-carrito-solo-comprador.spec.ts:5:5 › E2E-08 el productor que entra a /carrito ve un aviso y no puede enviar pedidos (747ms)
+
+  2 passed (3.5s)

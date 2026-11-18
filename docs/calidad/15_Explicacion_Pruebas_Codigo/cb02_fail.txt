@@ -1,0 +1,38 @@
+FAIL src/catalog/product-rules.whitebox.spec.ts
+  CB-02 validateProductInput
+    ✓ publicación completa y válida no tiene errores (2 ms)
+    ✓ rama de precio inválido: 0 (1 ms)
+    ✓ rama de precio inválido: -1
+    ✓ rama de precio inválido: 1500.5 (1 ms)
+    ✓ rama de precio inválido: 100000001
+    ✓ frontera del precio: 1 y MAX_PRICE son válidos
+    ✓ frontera de la cantidad: 0 es válido y -1 no (1 ms)
+    ✕ regresión DEF-03: cantidad por encima del máximo se rechaza (frontera MAX_QUANTITY) (1 ms)
+    ✓ regresión DEF-05: nombre y descripción con longitud máxima
+    ✓ cantidad decimal se rechaza
+    ✓ campos obligatorios vacíos producen un error por cada campo
+    ✓ modo parcial: solo valida los campos enviados
+    ✓ URL de imagen: http(s) o ruta propia válidas; texto suelto se rechaza
+
+  ● CB-02 validateProductInput › regresión DEF-03: cantidad por encima del máximo se rechaza (frontera MAX_QUANTITY)
+
+    expect(received).toContain(expected) // indexOf
+
+    Expected value: "La cantidad disponible supera el máximo permitido (1.000.000)"
+    Received array: []
+
+      43 |   test('regresión DEF-03: cantidad por encima del máximo se rechaza (frontera MAX_QUANTITY)', () => {
+      44 |     expect(validateProductInput({ ...valid(), quantity: MAX_QUANTITY })).toEqual([]);
+    > 45 |     expect(validateProductInput({ ...valid(), quantity: 3_000_000_000 })).toContain('La cantidad disponible supera el máximo permitido (1.000.000)');
+         |                                                                           ^
+      46 |   });
+      47 |
+      48 |   test('regresión DEF-05: nombre y descripción con longitud máxima', () => {
+
+      at Object.<anonymous> (catalog/product-rules.whitebox.spec.ts:45:75)
+
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 12 passed, 13 total
+Snapshots:   0 total
+Time:        3.328 s, estimated 4 s
+Ran all test suites matching /src\/catalog\/product-rules.whitebox.spec.ts/i.

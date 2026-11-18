@@ -1,5 +1,0 @@
-{"timestamp":"2026-11-16T18:53:30.799-05:00","level":"ERROR","context":"HealthController","event":"DATABASE_UNAVAILABLE","message":"No fue posible conectar con la base de datos","metadata":{"error":"PrismaClientKnownRequestError","durationMs":6}}
-{"timestamp":"2026-11-16T18:53:30.800-05:00","level":"ERROR","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /health","metadata":{"status":503,"durationMs":7}}
-{"timestamp":"2026-11-16T18:53:30.812-05:00","level":"ERROR","context":"ExceptionFilter","event":"UNHANDLED_ERROR","message":"Error no controlado","metadata":{"method":"POST","path":"/auth/login","error":"PrismaClientKnownRequestError","code":"P1001","cause":"Can't reach database server at 127.0.0.1:5432"}}
-{"timestamp":"2026-11-16T18:53:30.812-05:00","level":"ERROR","context":"HttpRequest","event":"HTTP_REQUEST","message":"POST /auth/login","metadata":{"status":500,"durationMs":4}}
-{"timestamp":"2026-11-16T18:53:32.956-05:00","level":"INFO","context":"HttpRequest","event":"HTTP_REQUEST","message":"GET /health","metadata":{"status":200,"durationMs":8}}
